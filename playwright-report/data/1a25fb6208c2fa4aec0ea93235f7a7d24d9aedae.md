@@ -1,0 +1,190 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Aller au contenu principal" [ref=e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - banner [ref=e4]:
+      - navigation [ref=e5]:
+        - link "Maison Nubi" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img [ref=e9]
+          - generic [ref=e12]: Maison Nubi
+        - generic [ref=e13]:
+          - link "Explorer" [ref=e14] [cursor=pointer]:
+            - /url: /recherche
+          - link "Notre mission" [ref=e15] [cursor=pointer]:
+            - /url: /a-propos
+          - link "Premium" [ref=e16] [cursor=pointer]:
+            - /url: /tarifs
+        - generic [ref=e17]:
+          - link "Rechercher" [ref=e18] [cursor=pointer]:
+            - /url: /recherche
+            - img
+            - generic [ref=e19]: Rechercher
+          - link "Connexion" [ref=e20] [cursor=pointer]:
+            - /url: /connexion
+          - link "Rejoindre" [ref=e21] [cursor=pointer]:
+            - /url: /inscription
+            - text: Rejoindre
+            - img
+    - main [ref=e22]:
+      - generic [ref=e23]:
+        - link "Retour" [ref=e29] [cursor=pointer]:
+          - /url: /recherche
+          - img
+          - text: Retour
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - img [ref=e35]
+            - generic [ref=e37]:
+              - generic [ref=e38]:
+                - generic [ref=e40]: Maquillage
+                - heading "Glam by Fatoumata" [level=1] [ref=e41]
+                - generic [ref=e42]:
+                  - img [ref=e43]
+                  - generic [ref=e46]: Plateau, Abidjan
+              - generic [ref=e47]:
+                - generic [ref=e48]:
+                  - button "Je recommande" [ref=e49]:
+                    - img [ref=e50]
+                    - generic [ref=e52]: Je recommande
+                  - button "Partager" [ref=e53]:
+                    - img
+                - button "WhatsApp" [ref=e54]:
+                  - img
+                  - text: WhatsApp
+          - generic [ref=e55]:
+            - generic [ref=e56]:
+              - generic [ref=e57]:
+                - heading "L'univers" [level=2] [ref=e59]
+                - paragraph [ref=e60]: « Maquilleuse professionnelle formée à Paris. Je réalise vos looks pour mariages, shootings photos, soirées VIP et événements corporate. Produits haut de gamme (MAC, Fenty, NARS). Devis gratuit sur demande. »
+              - generic [ref=e61]:
+                - heading "Carte des Prestations" [level=2] [ref=e62]
+                - generic [ref=e63]:
+                  - generic [ref=e64]:
+                    - generic [ref=e65]:
+                      - generic [ref=e67]: Maquillage Naturel
+                      - paragraph [ref=e69]: Soin signature
+                    - generic [ref=e70]: 20 000 FCFA
+                  - generic [ref=e71]:
+                    - generic [ref=e72]:
+                      - generic [ref=e74]: Maquillage Soirée
+                      - paragraph [ref=e76]: Soin signature
+                    - generic [ref=e77]: 35 000 FCFA
+                  - generic [ref=e78]:
+                    - generic [ref=e79]:
+                      - generic [ref=e81]: Cours de maquillage (2h)
+                      - paragraph [ref=e83]: Soin signature
+                    - generic [ref=e84]: 50 000 FCFA
+                  - generic [ref=e85]:
+                    - generic [ref=e86]:
+                      - generic [ref=e88]: Maquillage Mariée
+                      - paragraph [ref=e90]: Soin signature
+                    - generic [ref=e91]: 75 000 FCFA
+                  - generic [ref=e92]:
+                    - generic [ref=e93]:
+                      - generic [ref=e95]: Pack Mariage (mariée + 2 témoins)
+                      - paragraph [ref=e97]: Soin signature
+                    - generic [ref=e98]: 150 000 FCFA
+              - generic [ref=e99]:
+                - heading "Portfolio" [level=2] [ref=e101]
+                - generic [ref=e103]:
+                  - img "Réalisation 1" [ref=e105]
+                  - img "Réalisation 2" [ref=e108]
+                  - img "Réalisation 3" [ref=e111]
+            - complementary [ref=e114]:
+              - generic [ref=e117]:
+                - heading "Contact & Horaires" [level=3] [ref=e119]
+                - generic [ref=e120]:
+                  - img [ref=e122]
+                  - generic [ref=e125]:
+                    - paragraph [ref=e126]: Localisation
+                    - paragraph [ref=e127]:
+                      - text: Plateau
+                      - text: Abidjan, Côte d'Ivoire
+                - button "Contacter via WhatsApp" [ref=e128]:
+                  - img
+                  - text: Contacter via WhatsApp
+                - paragraph [ref=e129]: Réponse généralement en moins d'une heure
+              - generic [ref=e130]:
+                - img [ref=e131]
+                - generic [ref=e134]: Réservation sécurisée
+    - contentinfo [ref=e135]:
+      - generic [ref=e137]:
+        - generic [ref=e138]:
+          - link "Maison Nubi" [ref=e139] [cursor=pointer]:
+            - /url: /
+            - img [ref=e140]
+            - generic [ref=e143]: Maison Nubi
+          - paragraph [ref=e144]: La premiere plateforme digitale dediee a l excellence de la beaute en Cote d Ivoire.
+        - generic [ref=e145]:
+          - heading "Explorer" [level=4] [ref=e146]
+          - list [ref=e147]:
+            - listitem [ref=e148]:
+              - link "Rechercher un talent" [ref=e149] [cursor=pointer]:
+                - /url: /recherche
+            - listitem [ref=e150]:
+              - link "Notre mission" [ref=e151] [cursor=pointer]:
+                - /url: /a-propos
+            - listitem [ref=e152]:
+              - link "Espace Professionnel" [ref=e153] [cursor=pointer]:
+                - /url: /tarifs
+            - listitem [ref=e154]:
+              - link "Mon compte" [ref=e155] [cursor=pointer]:
+                - /url: /connexion
+        - generic [ref=e156]:
+          - heading "Services" [level=4] [ref=e157]
+          - list [ref=e158]:
+            - listitem [ref=e159]:
+              - link "Coiffure & Tresses" [ref=e160] [cursor=pointer]:
+                - /url: /recherche?category=coiffure
+            - listitem [ref=e161]:
+              - link "Maquillage" [ref=e162] [cursor=pointer]:
+                - /url: /recherche?category=makeup
+            - listitem [ref=e163]:
+              - link "Onglerie" [ref=e164] [cursor=pointer]:
+                - /url: /recherche?category=onglerie
+            - listitem [ref=e165]:
+              - link "Regard (Cils & Sourcils)" [ref=e166] [cursor=pointer]:
+                - /url: /recherche?category=regard
+            - listitem [ref=e167]:
+              - link "Soins & Esthétique" [ref=e168] [cursor=pointer]:
+                - /url: /recherche?category=soins
+            - listitem [ref=e169]:
+              - link "Bien-être & Spa" [ref=e170] [cursor=pointer]:
+                - /url: /recherche?category=spa
+            - listitem [ref=e171]:
+              - link "Henné" [ref=e172] [cursor=pointer]:
+                - /url: /recherche?category=henne
+            - listitem [ref=e173]:
+              - link "Barber Shop" [ref=e174] [cursor=pointer]:
+                - /url: /recherche?category=barber
+        - generic [ref=e175]:
+          - heading "Contact" [level=4] [ref=e176]
+          - list [ref=e177]:
+            - listitem [ref=e178]:
+              - img [ref=e179]
+              - generic [ref=e182]: Cocody Riviera 2, Abidjan
+            - listitem [ref=e183]:
+              - link "bonjour@maisonnubi.ci" [ref=e184] [cursor=pointer]:
+                - /url: mailto:bonjour@maisonnubi.ci
+                - img [ref=e185]
+                - generic [ref=e188]: bonjour@maisonnubi.ci
+          - link "Instagram" [ref=e189] [cursor=pointer]:
+            - /url: https://instagram.com/maisonnubi
+            - img [ref=e190]
+      - generic [ref=e194]:
+        - paragraph [ref=e195]: 2026 Maison Nubi. Tous droits reserves.
+        - generic [ref=e196]:
+          - link "Conditions Generales" [ref=e197] [cursor=pointer]:
+            - /url: /mentions-legales/cgu
+          - link "Politique de Confidentialite" [ref=e198] [cursor=pointer]:
+            - /url: /mentions-legales/confidentialite
+          - link "Gestion des cookies" [ref=e199] [cursor=pointer]:
+            - /url: /mentions-legales/cookies
+  - button "Open Next.js Dev Tools" [ref=e205] [cursor=pointer]:
+    - img [ref=e206]
+  - alert [ref=e209]
+```

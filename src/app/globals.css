@@ -1,0 +1,318 @@
+﻿@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Note: Les Google Fonts sont chargées via next/font dans layout.tsx */
+
+@custom-variant dark (&:is(.dark *));
+
+/* ===== Maison Nubi DESIGN SYSTEM ===== */
+
+@theme inline {
+  /* Couleurs sémantiques Tailwind standards */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* === COULEURS Maison Nubi SPÉCIFIQUES === */
+
+  /* L'Or (Premium) */
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+
+  /* Le Rose (Douceur/Esthétique) */
+  --color-rose-50: var(--rose-50);
+  /* Fond très pâle */
+  --color-rose-100: var(--rose-100);
+  /* Fond sections */
+  --color-rose-200: var(--rose-200);
+  /* Bordures subtiles */
+
+  /* Le Neutre */
+  --color-anthracite: var(--anthracite);
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-sans: 'Lato', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+:root {
+  /* Base radius */
+  --radius: 0.75rem;
+
+  /* === PALETTE Maison Nubi === */
+
+  /* 1. OR (Luxe & Action) */
+  --gold: #D4AF37;
+  --gold-light: #E8C94B;
+  --gold-dark: #B8962F;
+
+  /* 2. ROSE (Douceur & Esthétique) */
+  /* Plus riche qu'un simple blanc cassé */
+  --rose-50: #FDF2F2;
+  /* Base existante */
+  --rose-100: #FAE8E8;
+  /* Un peu plus visible (pour les hovers) */
+  --rose-200: #F5D0D0;
+  /* Pour les bordures décoratives */
+
+  /* 3. ANTHRACITE (Luxe & Modernité - Plus chaud que le noir) */
+  --anthracite: #1A1A1A;
+
+  /* 4. NEUTRES */
+  --muted: #F8F9FA;
+  --muted-foreground: #6B7280;
+
+  /* États */
+  --success: #10B981;
+  --error: #EF4444;
+
+  /* === MAPPING SHADCN / UI === */
+
+  --background: #FFFFFF;
+  --foreground: #2D2D2D;
+
+  --card: #FFFFFF;
+  --card-foreground: #2D2D2D;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #2D2D2D;
+
+  /* Boutons principaux en OR */
+  --primary: #D4AF37;
+  --primary-foreground: #FFFFFF;
+
+  /* Boutons secondaires en Anthracite */
+  --secondary: #2D2D2D;
+  --secondary-foreground: #FFFFFF;
+
+  /* Éléments interactifs (menus, listes) en ROSE doux au survol */
+  /* C'est ici qu'on injecte la touche esthétique */
+  --accent: #FDF2F2;
+  --accent-foreground: #D4AF37;
+  /* Texte doré sur fond rose */
+
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+
+  /* Ring de focus en Or */
+  --ring: #D4AF37;
+
+  /* Surface Dashboard (Gris très clair pour détacher les cartes blanches) */
+  --surface: #F9FAFB;
+}
+
+/* Mode sombre (optionnel - désaturé pour l'élégance) */
+.dark {
+  --background: #1C1C1C;
+  --foreground: #F5F5F5;
+  --card: #262626;
+  --card-foreground: #F5F5F5;
+  --popover: #262626;
+  --popover-foreground: #F5F5F5;
+  --primary: #D4AF37;
+  --primary-foreground: #1C1C1C;
+  --secondary: #404040;
+  --secondary-foreground: #F5F5F5;
+  --muted: #404040;
+  --muted-foreground: #A3A3A3;
+  --accent: #332D2D;
+  /* Rose très sombre */
+  --accent-foreground: #F5F5F5;
+  --destructive: #F87171;
+  --border: #404040;
+  --input: #404040;
+  --ring: #D4AF37;
+
+  --surface: #121212;
+
+  /* Rose ajusté pour le dark mode */
+  --rose-50: #2A2424;
+  --rose-100: #362E2E;
+  --rose-200: #4A3B3B;
+}
+
+@layer utilities {
+  .bg-surface {
+    background-color: var(--surface);
+  }
+
+  /* Typographie Standardisée Maison Nubi */
+  .text-h1 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--anthracite);
+    line-height: 1.1;
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+
+  .text-h2 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--anthracite);
+    line-height: 1.2;
+    @apply text-3xl sm:text-4xl;
+  }
+
+  .text-h3 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    color: var(--anthracite);
+    line-height: 1.3;
+    @apply text-xl sm:text-2xl;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Lato', sans-serif;
+  }
+
+  /* Typographie Maison Nubi - Titres Luxe */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--anthracite);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    /* Touche moderne */
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+/* === CLASSES UTILITAIRES Maison Nubi === */
+
+/* 1. Dégradé "Glow" Esthétique (Utiliser sur bg-sections) */
+/* Crée une ambiance douce rose/or sans être kitch */
+.bg-maison-nubi-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, var(--rose-50) 100%);
+}
+
+/* 2. Glassmorphism teinté de rose (pour les menus flottants) */
+.glass-panel {
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
+}
+
+/* 3. Animation pulsante Or */
+@keyframes pulse-gold {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 8px rgba(212, 175, 55, 0);
+  }
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2s infinite;
+}
+
+/* 4. Hover Carte Premium */
+.card-hover {
+  @apply transition-all duration-300 ease-out border border-transparent;
+}
+
+.card-hover:hover {
+  @apply -translate-y-1 shadow-lg;
+  /* Ombre légèrement rosée au survol */
+  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+  border-color: var(--rose-200);
+}
+
+/* 5. Skeleton Loading */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* 6. Loading Bar Animation */
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* 7. Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
