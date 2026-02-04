@@ -83,7 +83,7 @@ export default function AboutPage() {
                         </h1>
 
                         <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed md:text-xl">
-                            Maison Nubi est née d'une vision simple : offrir aux talents de la beauté une vitrine digne de leur art, et aux clients l'expérience fluide qu'ils méritent.
+                            Nous aidons les clients à découvrir les meilleurs pros de beauté à Abidjan — et aidons les pros à remplir leur agenda chaque semaine.
                         </p>
                     </div>
                 </div>
