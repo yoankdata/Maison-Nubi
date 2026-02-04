@@ -221,7 +221,7 @@ export default function PricingPage() {
                         <CardFooter className="p-8 pt-0 flex-col gap-4">
                             <Button asChild className="w-full rounded-xl h-14 bg-white hover:bg-slate-200 text-slate-950 text-lg font-bold transition-all shadow-lg shadow-white/5">
                                 <Link
-                                    href="https://wa.me/2250707756297?text=Bonjour%2C%20je%20souhaite%20cr%C3%A9er%20mon%20site%20maintenant%20avec%20l'offre%20Maison%20Nubi%20PRESTIGE."
+                                    href="https://wa.me/33760164998?text=Bonjour%2C%20je%20souhaite%20cr%C3%A9er%20mon%20site%20maintenant%20avec%20l'offre%20Maison%20Nubi%20PRESTIGE."
                                     target="_blank"
                                 >
                                     Créer mon site maintenant
