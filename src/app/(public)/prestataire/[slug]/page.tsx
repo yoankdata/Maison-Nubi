@@ -398,6 +398,21 @@ export default async function ProviderProfilePage({ params }: { params: Promise<
 
                 </div>
             </div>
-        </div>
+
+            {/* === 4. MOBILE STICKY BOOKING BAR (Visible uniquement mobile) === */}
+            <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-xl border-t border-gray-100 z-50 md:hidden animate-in slide-in-from-bottom-5 fade-in duration-500">
+                <WhatsAppButton
+                    whatsapp={profile.whatsapp}
+                    providerEmail={profile.email || ''}
+                    providerName={profile.full_name}
+                    category={categoryLabels[profile.category]}
+                    variant="fixed"
+                    className="w-full h-14 rounded-full bg-[#25D366] hover:bg-[#20BD5C] text-white font-bold shadow-lg shadow-[#25D366]/20 flex items-center justify-center text-lg active:scale-95 transition-transform"
+                >
+                    <MessageCircle className="mr-2 h-6 w-6" />
+                    Discuter (WhatsApp)
+                </WhatsAppButton>
+            </div>
+        </div >
     );
 }
