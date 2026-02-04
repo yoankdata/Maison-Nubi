@@ -4,6 +4,14 @@ import { createClient } from '@/lib/supabase-server';
 import { isPremiumActive } from '@/lib/premium';
 import type { Database } from '@/lib/database.types';
 import type { SupabaseClient } from '@supabase/supabase-js';
+import { z } from 'zod';
+
+// Schéma de validation pour la requête
+const checkoutRequestSchema = z.object({
+    planType: z.enum(['monthly', 'annual', 'boost'], {
+        message: 'Type de plan invalide. Valeurs acceptées: monthly, annual, boost'
+    }),
+});
 
 /**
  * POST /api/stripe/create-checkout-session
@@ -49,15 +57,18 @@ export async function POST(request: NextRequest) {
         // Typage explicite après validation avec assertion de type
         const profile = profileData as ProfileData;
 
-        const { planType } = await request.json();
+        // Validation du payload avec Zod
+        const body = await request.json();
+        const validationResult = checkoutRequestSchema.safeParse(body);
 
-        // Validation du type de plan
-        if (!['monthly', 'annual', 'boost'].includes(planType)) {
+        if (!validationResult.success) {
             return NextResponse.json(
-                { error: 'Type de plan invalide' },
+                { error: validationResult.error.issues[0]?.message || 'Type de plan invalide' },
                 { status: 400 }
             );
         }
+
+        const { planType } = validationResult.data;
 
         // === GESTION DU BOOST ===
         if (planType === 'boost') {
@@ -185,8 +196,14 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ sessionId: session.id, url: session.url });
     } catch (error: any) {
         console.error('Erreur création session Stripe:', error);
+
+        // En production, masquer les détails techniques
+        const errorMessage = process.env.NODE_ENV === 'production'
+            ? 'Une erreur est survenue lors de la création de la session'
+            : error.message || 'Erreur lors de la création de la session';
+
         return NextResponse.json(
-            { error: error.message || 'Erreur lors de la création de la session' },
+            { error: errorMessage },
             { status: 500 }
         );
     }
