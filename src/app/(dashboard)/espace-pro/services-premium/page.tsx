@@ -55,74 +55,99 @@ export default function ServicesPremiumPage() {
                 </CardContent>
             </Card>
 
-            {/* Service 1 : Site Web Signature */}
-            <Card className="group relative bg-white rounded-3xl overflow-hidden hover:shadow-2xl transition-shadow duration-500 border-2 border-slate-100">
-                <div className="absolute -top-20 -right-20 w-40 h-40 bg-gold/5 rounded-full blur-3xl group-hover:bg-gold/10 transition-colors" />
-
-                <CardContent className="p-8 md:p-12 relative z-10">
-                    <div className="flex items-center gap-3 mb-6">
-                        <Badge className="bg-anthracite text-white hover:bg-anthracite border-none text-xs px-3 py-1">
-                            Best-Seller
-                        </Badge>
-                        <span className="text-sm font-semibold text-gold-dark tracking-wide uppercase">
-                            Indépendance Totale
-                        </span>
-                    </div>
-
-                    <h3 className="text-4xl font-serif font-bold text-anthracite mb-4 leading-none">
-                        Site Web Signature
-                    </h3>
-                    <p className="text-slate-600 text-lg mb-10 max-w-lg">
-                        Votre propre vitrine digitale (.ci). <br />
-                        Luxe, crédibilité et réservations directes.
-                    </p>
-
-                    <div className="grid grid-cols-2 gap-6 mb-12">
-                        <div className="flex flex-col gap-2">
-                            <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mb-1">
-                                <Globe className="w-5 h-5 text-gold-dark" />
-                            </div>
-                            <span className="font-bold text-anthracite">Domaine .ci</span>
-                            <span className="text-xs text-muted-foreground">inclus 1 an</span>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mb-1">
-                                <Smartphone className="w-5 h-5 text-gold-dark" />
-                            </div>
-                            <span className="font-bold text-anthracite">Mobile First</span>
-                            <span className="text-xs text-muted-foreground">Design responsive</span>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mb-1">
-                                <Camera className="w-5 h-5 text-gold-dark" />
-                            </div>
-                            <span className="font-bold text-anthracite">Galerie HD</span>
-                            <span className="text-xs text-muted-foreground">Illimité</span>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mb-1">
-                                <Star className="w-5 h-5 text-gold-dark" />
-                            </div>
-                            <span className="font-bold text-anthracite">Avis Nubi</span>
-                            <span className="text-xs text-muted-foreground">Synchronisés</span>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col md:flex-row items-end md:items-center justify-between gap-6 pt-8 border-t border-slate-100">
+            {/* Service 1 : Maison Nubi Prestige (NOUVEAU) */}
+            <Card className="relative border-slate-800 bg-slate-950 text-white shadow-2xl overflow-hidden transform transition-transform duration-300 hover:scale-[1.01]">
+                <CardContent className="p-8 md:p-12">
+                    <div className="flex flex-col md:flex-row justify-between md:items-start gap-6 mb-8">
                         <div>
-                            <div className="text-5xl font-bold text-anthracite tracking-tight mb-1">
-                                150 000 <span className="text-2xl text-slate-400 font-medium">FCFA</span>
+                            <div className="flex items-center gap-3 mb-4">
+                                <Badge className="bg-white/10 text-white hover:bg-white/20 border border-white/20 text-xs px-3 py-1">
+                                    Recommandé
+                                </Badge>
+                                <span className="text-sm font-semibold text-[#D4AF37] tracking-wide uppercase">
+                                    Offre Ultime
+                                </span>
                             </div>
-                            <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">
-                                Paiement unique
+                            <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-2">
+                                NUBI PRESTIGE
+                            </h3>
+                            <p className="text-slate-400 text-lg">
+                                Votre marque. Votre site. Vos clients.
+                            </p>
+                        </div>
+                        <div className="text-right">
+                            <div className="text-3xl md:text-5xl font-bold text-[#D4AF37] tracking-tight">
+                                35 000 <span className="text-lg md:text-xl text-slate-400 font-medium">FCFA / mois</span>
+                            </div>
+                            <p className="text-sm text-slate-500 mt-1">ou 400 000 FCFA / an</p>
+                        </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 mb-10">
+                        {/* Colonne 1 */}
+                        <div className="space-y-4">
+                            <div className="flex items-start gap-3">
+                                <div className="w-6 h-6 rounded-full bg-[#D4AF37]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <Globe className="w-3.5 h-3.5 text-[#D4AF37]" />
+                                </div>
+                                <div>
+                                    <span className="font-bold text-white block">Votre Propre Site Web (.ci)</span>
+                                    <span className="text-sm text-slate-400">Actif 100% à vous (Hébergement inclus)</span>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <div className="w-6 h-6 rounded-full bg-[#D4AF37]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" />
+                                </div>
+                                <div>
+                                    <span className="font-bold text-white block">10-20 Réservations / mois</span>
+                                    <span className="text-sm text-slate-400">Estimation sans commission</span>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <div className="w-6 h-6 rounded-full bg-[#D4AF37]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" />
+                                </div>
+                                <div>
+                                    <span className="font-bold text-white block">Vos clients vous appartiennent</span>
+                                    <span className="text-sm text-slate-400">Zéro dépendance plateforme</span>
+                                </div>
                             </div>
                         </div>
+
+                        {/* Colonne 2 */}
+                        <div className="space-y-4">
+                            <div className="flex items-start gap-3">
+                                <div className="w-6 h-6 rounded-full bg-[#D4AF37]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" />
+                                </div>
+                                <div>
+                                    <span className="font-bold text-white block">Google Maps & SEO Local</span>
+                                    <span className="text-sm text-slate-400">Soyez visible partout</span>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <div className="w-6 h-6 rounded-full bg-[#D4AF37]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" />
+                                </div>
+                                <div>
+                                    <span className="font-bold text-white block">Maintenance Technique</span>
+                                    <span className="text-sm text-slate-400">On gère tout pour vous</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-end gap-6">
                         <Button
                             asChild
-                            className="h-14 px-8 rounded-full bg-anthracite text-white hover:bg-gold hover:text-white transition-all duration-300 text-lg font-bold shadow-xl"
+                            className="w-full sm:w-auto h-14 px-8 rounded-xl bg-white text-slate-950 hover:bg-slate-200 transition-all duration-300 text-lg font-bold shadow-lg shadow-white/5"
                         >
-                            <Link href="https://wa.me/2250707756297?text=Je%20souhaite%20lancer%20mon%20site%20web" target="_blank">
-                                Lancer mon projet
+                            <Link href="https://wa.me/33760164998?text=Bonjour%2C%20je%20souhaite%20passer%20%C3%A0%20l'offre%20Maison%20Nubi%20PRESTIGE%20pour%20mon%20salon." target="_blank">
+                                Créer mon site maintenant
                                 <ArrowRight className="ml-2 h-5 w-5" />
                             </Link>
                         </Button>
