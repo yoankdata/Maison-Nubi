@@ -10,9 +10,9 @@ import { usePathname } from "next/navigation";
 
 // Liens de navigation avec icones
 const navLinks = [
-    { href: "/recherche", label: "Explorer" },
-    { href: "/a-propos", label: "Notre mission" },
-    { href: "/tarifs", label: "Premium" },
+    { href: "/recherche", label: "Trouver un salon" },
+    { href: "/a-propos", label: "Pour les pros" },
+    { href: "/tarifs", label: "Tarifs" },
 ];
 
 /**
