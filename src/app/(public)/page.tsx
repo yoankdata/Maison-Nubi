@@ -172,8 +172,7 @@ export default function HomePage() {
 
           {/* Sous-titre Minimaliste */}
           <p className="mx-auto mb-12 max-w-xl text-base sm:text-lg text-muted-foreground font-light leading-relaxed tracking-wide px-4">
-            L'annuaire sélectif des meilleurs coiffeurs, maquilleurs et
-            experts beauté de Côte d'Ivoire.
+            Parce que vous ne voulez pas être changée, mais sublimée. Trouvez les experts qui révèlent votre naturel à Abidjan.
           </p>
 
           {/* Barre de Recherche "Floating Pill" */}
