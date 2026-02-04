@@ -79,7 +79,7 @@ export default function PricingPage() {
 
             {/* --- 2. MAIN PRICING CARDS --- */}
             <section className="pb-24 container mx-auto px-4">
-                <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
+                <div className="grid lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto items-start">
 
                     {/* Starter Card */}
                     <Card className="border border-slate-200 shadow-none hover:shadow-lg transition-all duration-300 bg-white/50 backdrop-blur-sm relative top-4">
@@ -115,29 +115,21 @@ export default function PricingPage() {
                     </Card>
 
                     {/* Gold Card (Premium) */}
-                    <Card className="relative border-[#D4AF37] border-2 shadow-2xl shadow-amber-500/10 flex flex-col overflow-hidden bg-white transform md:-translate-y-4 transition-transform duration-300 hover:scale-[1.02]">
-                        {/* Ribbon */}
-                        <div className="absolute top-0 right-0">
-                            <div className="absolute top-0 right-0 w-0 h-0 border-t-[80px] border-r-[80px] border-t-[#D4AF37] border-r-transparent z-0 opacity-10"></div>
-                            <div className="bg-[#D4AF37] text-white text-[10px] font-bold px-8 py-1 rotate-45 translate-x-8 translate-y-4 uppercase shadow-sm z-10 relative">
-                                Recommandé
-                            </div>
-                        </div>
-
-                        <CardHeader className="p-8 bg-gradient-to-b from-amber-50/50 to-transparent">
+                    <Card className="relative border-[#D4AF37] border shadow-xl shadow-amber-500/5 flex flex-col bg-white">
+                        <CardHeader className="p-8 pb-4">
                             <div className="flex items-center gap-2 mb-2">
                                 <CardTitle className="text-2xl font-bold text-[#B4922B] flex items-center gap-2 font-serif">
                                     NUBI GOLD
                                 </CardTitle>
                                 <Crown className="w-6 h-6 text-[#D4AF37] fill-[#D4AF37]" />
                             </div>
-                            <CardDescription className="text-[#B4922B]/80 font-medium">L'outil ultime pour remplir votre agenda.</CardDescription>
+                            <CardDescription className="text-[#B4922B]/80 font-medium">Pour remplir votre agenda.</CardDescription>
 
-                            <div className="mt-8 flex items-baseline">
-                                <span className="text-5xl font-bold text-slate-900 tracking-tight">
+                            <div className="mt-6 flex items-baseline">
+                                <span className="text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight">
                                     {billingCycle === 'annually' ? '100 000' : '10 000'}
                                 </span>
-                                <span className="ml-2 text-slate-500 font-medium">FCFA / {billingCycle === 'annually' ? 'an' : 'mois'}</span>
+                                <span className="ml-2 text-slate-500 font-medium text-sm lg:text-base">FCFA / {billingCycle === 'annually' ? 'an' : 'mois'}</span>
                             </div>
                             {billingCycle === 'annually' && (
                                 <p className="text-xs text-green-600 font-bold mt-2 bg-green-50 inline-block px-2 py-1 rounded">Économisez 20 000 FCFA</p>
@@ -166,19 +158,84 @@ export default function PricingPage() {
                                     <Zap className="w-5 h-5 fill-current" /> Devenir Membre Gold
                                 </Link>
                             </Button>
-
-                            <div className="bg-slate-50 rounded-lg p-3 w-full text-center">
-                                <p className="text-[11px] text-slate-500 font-medium mb-1.5 uppercase tracking-wide">Paiements sécurisés acceptés</p>
-                                <div className="flex justify-center gap-2 opacity-70 grayscale hover:grayscale-0 transition-all">
-                                    <span className="text-xs font-bold border rounded px-1">Visa</span>
-                                    <span className="text-xs font-bold border rounded px-1">Mastercard</span>
-                                    <span className="text-xs font-bold border rounded px-1">Orange</span>
-                                    <span className="text-xs font-bold border rounded px-1">MTN</span>
-                                    <span className="text-xs font-bold border rounded px-1">Wave</span>
-                                </div>
-                            </div>
                         </CardFooter>
                     </Card>
+
+                    {/* PRESTIGE CARD (NOUVEAU) */}
+                    <Card className="relative border-slate-800 bg-slate-950 text-white shadow-2xl overflow-hidden transform md:-translate-y-4 transition-transform duration-300 hover:scale-[1.02]">
+                        {/* Ribbon */}
+                        <div className="absolute top-0 right-0">
+                            <div className="bg-white/10 backdrop-blur-md text-white border border-white/20 text-[10px] font-bold px-4 py-1.5 rounded-bl-xl shadow-sm z-10 relative">
+                                ULTIME
+                            </div>
+                        </div>
+
+                        <CardHeader className="p-8 border-b border-white/10 bg-gradient-to-b from-slate-900 to-slate-950">
+                            <div className="flex items-center gap-2 mb-2">
+                                <CardTitle className="text-2xl font-bold text-white flex items-center gap-2 font-serif">
+                                    NUBI PRESTIGE
+                                </CardTitle>
+                            </div>
+                            <CardDescription className="text-slate-400">Votre marque. Votre site. Vos clients.</CardDescription>
+
+                            <div className="mt-6 flex items-baseline">
+                                <span className="text-4xl lg:text-5xl font-bold text-[#D4AF37] tracking-tight">
+                                    {billingCycle === 'annually' ? '400 000' : '35 000'}
+                                </span>
+                                <span className="ml-2 text-slate-400 font-medium text-sm lg:text-base">FCFA / {billingCycle === 'annually' ? 'an' : 'mois'}</span>
+                            </div>
+                        </CardHeader>
+
+                        <CardContent className="p-8 flex-grow">
+                            <div className="space-y-6">
+                                <div className="space-y-3">
+                                    <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Inclus Nubi Gold +</p>
+
+                                    {/* BENEFIT: Site Web Propriétaire */}
+                                    <div className="flex items-start gap-3 text-sm">
+                                        <CheckCircle2 className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                                        <span className="font-bold text-white">Votre Propre Site Web (.ci) <span className="text-slate-500 font-normal block text-xs mt-0.5">Actif 100% à vous</span></span>
+                                    </div>
+
+                                    {/* BENEFIT: Réservations (Résultat) */}
+                                    <div className="flex items-start gap-3 text-sm">
+                                        <CheckCircle2 className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                                        <span className="font-bold text-white">10-20 Réservations / mois <span className="text-slate-500 font-normal block text-xs mt-0.5">Estimation sans commission</span></span>
+                                    </div>
+
+                                    {/* BENEFIT: Propriété Data */}
+                                    <div className="flex items-start gap-3 text-sm">
+                                        <CheckCircle2 className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                                        <span className="text-slate-300">Vos clients vous appartiennent</span>
+                                    </div>
+
+                                    {/* BENEFIT: Visibilité Locale */}
+                                    <div className="flex items-start gap-3 text-sm">
+                                        <CheckCircle2 className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                                        <span className="text-slate-300">Google Maps & SEO Local</span>
+                                    </div>
+
+                                    {/* BENEFIT: Maintenance */}
+                                    <div className="flex items-start gap-3 text-sm">
+                                        <CheckCircle2 className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                                        <span className="text-slate-300">Maintenance Technique incluse</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </CardContent>
+
+                        <CardFooter className="p-8 pt-0 flex-col gap-4">
+                            <Button asChild className="w-full rounded-xl h-14 bg-white hover:bg-slate-200 text-slate-950 text-lg font-bold transition-all shadow-lg shadow-white/5">
+                                <Link
+                                    href="https://wa.me/2250707756297?text=Bonjour%2C%20je%20souhaite%20cr%C3%A9er%20mon%20site%20maintenant%20avec%20l'offre%20Maison%20Nubi%20PRESTIGE."
+                                    target="_blank"
+                                >
+                                    Créer mon site maintenant
+                                </Link>
+                            </Button>
+                        </CardFooter>
+                    </Card>
+
                 </div>
             </section>
 
@@ -190,56 +247,18 @@ export default function PricingPage() {
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[120px] pointer-events-none" />
 
                 <div className="container mx-auto px-4 relative z-10">
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-16">
                         <Badge className="bg-white/10 text-white border-white/20 mb-6 px-4 py-1.5 hover:bg-white/20 transition-colors">
-                            SERVICES À LA CARTE
+                            À LA CARTE
                         </Badge>
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">
-                            Passez de l'ombre <br /><span className="text-[#D4AF37] italic">à la lumière</span>
+                            Besoin d'un coup de pouce <br /><span className="text-[#D4AF37] italic">ponctuel ?</span>
                         </h2>
-                        <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light">
-                            Au-delà de l'abonnement, des solutions sur-mesure pour votre image de marque.
-                        </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto items-stretch">
+                    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
 
-                        {/* SERVICE 1 : Site Web */}
-                        <div className="group relative bg-white text-slate-900 rounded-[2rem] p-8 flex flex-col justify-between shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                            <div>
-                                <div className="flex items-center justify-between mb-8">
-                                    <Badge className="bg-slate-900 text-white hover:bg-slate-800 border-none">Best-Seller</Badge>
-                                    <Globe className="w-8 h-8 text-slate-200 group-hover:text-[#D4AF37] transition-colors" />
-                                </div>
-                                <h3 className="text-3xl font-serif font-bold mb-4">Site Web Signature</h3>
-                                <p className="text-slate-600 mb-8 leading-relaxed">
-                                    Votre propre vitrine digitale (.ci). Luxe, crédibilité et réservations directes sans commission.
-                                </p>
-                                <div className="space-y-4 mb-8">
-                                    {["Domaine .ci offert 1 an", "Design Mobile First", "Galerie HD Illimitée", "Synchronisation Avis"].map((item, i) => (
-                                        <div key={i} className="flex items-center gap-3">
-                                            <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
-                                                <Check className="w-3.5 h-3.5 text-slate-900" />
-                                            </div>
-                                            <span className="text-sm font-medium text-slate-700">{item}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className="pt-8 border-t border-slate-100">
-                                <div className="flex items-end gap-2 mb-6">
-                                    <span className="text-4xl font-bold text-slate-900">150.000</span>
-                                    <span className="text-sm font-medium text-slate-400 pb-1">FCFA / unique</span>
-                                </div>
-                                <Button asChild className="w-full h-12 rounded-full bg-slate-900 text-white hover:bg-[#D4AF37] transition-all duration-300 font-bold">
-                                    <Link href="https://wa.me/2250707756297" target="_blank">
-                                        Lancer mon projet <ArrowRight className="w-4 h-4 ml-2" />
-                                    </Link>
-                                </Button>
-                            </div>
-                        </div>
-
-                        {/* SERVICE 2 : Instagram */}
+                        {/* SERVICE 1 : Instagram */}
                         <div className="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] p-8 flex flex-col justify-between hover:bg-white/10 transition-all duration-500">
                             <div>
                                 <div className="flex items-center justify-between mb-8">
@@ -274,7 +293,7 @@ export default function PricingPage() {
                             </div>
                         </div>
 
-                        {/* SERVICE 3 : Boost (Petit prix) */}
+                        {/* SERVICE 2 : Boost (Petit prix) */}
                         <div className="group relative bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-[2rem] p-8 flex flex-col justify-between shadow-lg hover:border-[#D4AF37]/50 transition-colors duration-500">
                             <div className="absolute top-4 right-4 bg-[#D4AF37] text-white text-[10px] font-bold px-3 py-1 rounded-full animate-pulse">
                                 NEW
