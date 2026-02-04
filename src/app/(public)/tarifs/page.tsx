@@ -163,12 +163,6 @@ export default function PricingPage() {
 
                     {/* PRESTIGE CARD (NOUVEAU) */}
                     <Card className="relative border-slate-800 bg-slate-950 text-white shadow-2xl overflow-hidden transform md:-translate-y-4 transition-transform duration-300 hover:scale-[1.02]">
-                        {/* Ribbon */}
-                        <div className="absolute top-0 right-0">
-                            <div className="bg-white/10 backdrop-blur-md text-white border border-white/20 text-[10px] font-bold px-4 py-1.5 rounded-bl-xl shadow-sm z-10 relative">
-                                ULTIME
-                            </div>
-                        </div>
 
                         <CardHeader className="p-8 border-b border-white/10 bg-gradient-to-b from-slate-900 to-slate-950">
                             <div className="flex items-center gap-2 mb-2">
