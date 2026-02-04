@@ -129,7 +129,7 @@ export default function PrivacyPage() {
                     </p>
 
                     <div className="mt-16 pt-8 border-t border-border/50 flex flex-col items-center">
-                        <p className="text-sm text-muted-foreground mb-4">Dernière mise à jour : Décembre 2024</p>
+                        <p className="text-sm text-muted-foreground mb-4">Dernière mise à jour : Février 2026</p>
                     </div>
                 </article>
             </div>

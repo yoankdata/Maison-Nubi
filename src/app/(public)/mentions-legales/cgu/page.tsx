@@ -41,7 +41,7 @@ export default function TermsPage() {
 
                 <article className="prose prose-lg prose-slate max-w-none prose-headings:font-serif prose-headings:text-anthracite prose-a:text-gold hover:prose-a:text-gold-dark prose-blockquote:border-l-gold">
                     <p className="lead font-serif text-xl text-anthracite/80 italic">
-                        Dernière mise à jour : Décembre 2024
+                        Dernière mise à jour : Février 2026
                     </p>
 
                     <h2 className="flex items-center gap-3 text-2xl mt-12">

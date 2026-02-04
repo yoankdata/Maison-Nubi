@@ -75,20 +75,13 @@ export const metadata: Metadata = {
     title: "Maison Nubi | Révélez votre éclat",
     description:
       "Trouvez les meilleurs professionnels de la beauté en Côte d'Ivoire. Une sélection rigoureuse pour des prestations d'exception.",
-    images: [
-      {
-        url: "/og-image.jpg", // Assurez-vous d'avoir une image 'public/og-image.jpg' (1200x630px)
-        width: 1200,
-        height: 630,
-        alt: "Maison Nubi - Annuaire Beauté Premium",
-      },
-    ],
+    // images est géré automatiquement par opengraph-image.png dans src/app
   },
   twitter: {
     card: "summary_large_image",
     title: "Maison Nubi | L'annuaire beauté premium",
     description: "Trouvez les meilleurs professionnels de la beauté en Côte d'Ivoire.",
-    images: ["/og-image.jpg"],
+    // images géré automatiquement
   },
   robots: {
     index: true,
@@ -101,11 +94,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/apple-touch-icon.png",
-  },
+  // icons géré automatiquement par icon.png dans src/app
 };
 
 export default function RootLayout({
