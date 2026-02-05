@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
+import { Analytics } from "@/components/analytics";
 
 // Configuration des fonts
 const playfair = Playfair_Display({
@@ -24,8 +25,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Maison Nubi",
-  url: "https://maisonnubi.ci",
-  logo: "https://maisonnubi.ci/icon.png",
+  url: "https://maisonnubi.com",
+  logo: "https://maisonnubi.com/icon.png",
   description: "L'annuaire beauté premium en Côte d'Ivoire.",
   address: {
     "@type": "PostalAddress",
@@ -43,7 +44,7 @@ export const viewport: Viewport = {
 
 // Metadata SEO globale
 export const metadata: Metadata = {
-  metadataBase: new URL("https://maisonnubi.ci"), // INDISPENSABLE pour que les images OG fonctionnent
+  metadataBase: new URL("https://maisonnubi.com"), // INDISPENSABLE pour que les images OG fonctionnent
   title: {
     default: "Maison Nubi | L'annuaire beauté premium en Côte d'Ivoire",
     template: "%s | Maison Nubi",
@@ -70,7 +71,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_CI",
-    url: "https://maisonnubi.ci",
+    url: "https://maisonnubi.com",
     siteName: "Maison Nubi",
     title: "Maison Nubi | Révélez votre éclat",
     description:
@@ -117,6 +118,7 @@ export default function RootLayout({
         <Providers>
           {children}
         </Providers>
+        <Analytics />
       </body>
     </html>
   );

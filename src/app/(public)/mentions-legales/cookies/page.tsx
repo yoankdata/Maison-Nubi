@@ -64,12 +64,6 @@ export default function CookiesPage() {
                         Dernière mise à jour : Février 2026.
                     </p>
                 </section>
-
-                <section className="pt-8 border-t border-slate-200">
-                    <p className="text-sm text-slate-500">
-                        Une question ? Contactez notre DPO à : <a href="mailto:bonjour@maisonnubi.ci" className="text-gold font-medium hover:underline">bonjour@maisonnubi.ci</a>
-                    </p>
-                </section>
             </div>
         </div>
     );

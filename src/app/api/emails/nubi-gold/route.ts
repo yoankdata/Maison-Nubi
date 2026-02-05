@@ -104,7 +104,7 @@ export async function POST(request: Request) {
                                 contactez-nous sur WhatsApp au <strong style="color: #1a1a1a;">07 07 75 62 97</strong>.
                             </p>
                             
-                            <a href="https://maisonnubi.ci/espace-pro/profil" style="display: inline-block; background: linear-gradient(135deg, #D4AF37 0%, #B8972E 100%); color: #ffffff; text-decoration: none; padding: 16px 32px; border-radius: 50px; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 16px rgba(212,175,55,0.3);">
+                            <a href="https://maisonnubi.com/espace-pro/profil" style="display: inline-block; background: linear-gradient(135deg, #D4AF37 0%, #B8972E 100%); color: #ffffff; text-decoration: none; padding: 16px 32px; border-radius: 50px; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 16px rgba(212,175,55,0.3);">
                                 Accéder à mon espace
                             </a>
                         </td>

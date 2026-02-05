@@ -166,7 +166,7 @@ export async function POST(request: Request) {
                             </p>
                             ` : ''}
                             
-                            <a href="https://maisonnubi.ci/espace-pro/profil" style="display: inline-block; background-color: #1a1a1a; color: #ffffff; text-decoration: none; padding: 16px 32px; border-radius: 50px; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">
+                            <a href="https://maisonnubi.com/espace-pro/profil" style="display: inline-block; background-color: #1a1a1a; color: #ffffff; text-decoration: none; padding: 16px 32px; border-radius: 50px; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">
                                 Voir mon tableau de bord
                             </a>
                         </td>

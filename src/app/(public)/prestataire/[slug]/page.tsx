@@ -113,7 +113,7 @@ export default async function ProviderProfilePage({ params }: { params: Promise<
         "@context": "https://schema.org",
         "@type": "BeautySalon",
         name: profile.full_name,
-        image: [avatarImage || "https://maisonnubi.ci/og-image.jpg"],
+        image: [avatarImage || "https://maisonnubi.com/og-image.jpg"],
         description: profile.bio || `Découvrez ${profile.full_name}, professionnel de la beauté à Abidjan.`,
         address: {
             "@type": "PostalAddress",
@@ -123,7 +123,7 @@ export default async function ProviderProfilePage({ params }: { params: Promise<
             addressCountry: "CI"
         },
         priceRange: priceRange,
-        url: `https://maisonnubi.ci/prestataire/${profile.slug}`,
+        url: `https://maisonnubi.com/prestataire/${profile.slug}`,
         telephone: profile.whatsapp ? `+225${profile.whatsapp}` : undefined,
     };
 
@@ -207,7 +207,7 @@ export default async function ProviderProfilePage({ params }: { params: Promise<
                                 <div className="flex gap-2">
                                     <LikeButton profileId={profile.id} initialCount={profile.recommendations_count || 0} />
                                     <ShareButton
-                                        url={`https://maisonnubi.ci/prestataire/${profile.slug}`}
+                                        url={`https://maisonnubi.com/prestataire/${profile.slug}`}
                                         title={`Découvrez ${profile.full_name} sur Maison Nubi`}
                                     />
                                 </div>

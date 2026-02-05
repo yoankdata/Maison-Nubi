@@ -99,15 +99,6 @@ export function Footer() {
                                 <MapPin className="h-4 w-4 flex-shrink-0 text-gold mt-0.5 group-hover:scale-110 transition-transform" />
                                 <span>Cocody Riviera 2, Abidjan</span>
                             </li>
-                            <li>
-                                <a
-                                    href="mailto:bonjour@maisonnubi.ci"
-                                    className="flex items-center gap-3 text-sm text-gray-400 hover:text-gold transition-colors group"
-                                >
-                                    <Mail className="h-4 w-4 flex-shrink-0 text-gold group-hover:scale-110 transition-transform" />
-                                    <span>bonjour@maisonnubi.ci</span>
-                                </a>
-                            </li>
                         </ul>
 
                         <a

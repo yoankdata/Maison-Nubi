@@ -50,7 +50,7 @@ export default function TermsPage() {
                     </h2>
                     <p>
                         Les présentes Conditions Générales d'Utilisation (CGU) définissent les modalités
-                        d'accès et d'utilisation de la plateforme Maison Nubi, accessible à l'adresse maisonnubi.ci
+                        d'accès et d'utilisation de la plateforme Maison Nubi, accessible à l'adresse maisonnubi.com
                         (ci-après "le Site").
                     </p>
                     <p>
@@ -143,13 +143,6 @@ export default function TermsPage() {
                         Maison Nubi agit en tant qu'intermédiaire et ne peut être tenu responsable des
                         prestations effectuées par les professionnels inscrits sur la plateforme.
                     </p>
-
-                    <div className="mt-16 pt-8 border-t border-border/50 text-center">
-                        <p className="text-lg font-serif text-anthracite mb-4">Une question sur nos conditions ?</p>
-                        <Button asChild size="lg" className="rounded-full bg-anthracite text-white hover:bg-gold transition-colors px-8">
-                            <a href="mailto:contact@maisonnubi.ci">Nous contacter</a>
-                        </Button>
-                    </div>
                 </article>
             </div>
         </div>

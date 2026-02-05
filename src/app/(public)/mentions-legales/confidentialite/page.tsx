@@ -123,10 +123,6 @@ export default function PrivacyPage() {
                         Vos Droits
                     </h2>
                     <p>Conformément à la réglementation, vous disposez d'un droit d'accès, de rectification et de suppression de vos données.</p>
-                    <p>
-                        Pour exercer ces droits ou supprimer votre compte, contactez simplement notre DPO à : <br />
-                        <a href="mailto:contact@maisonnubi.ci" className="font-serif text-gold text-lg no-underline hover:underline">contact@maisonnubi.ci</a>
-                    </p>
 
                     <div className="mt-16 pt-8 border-t border-border/50 flex flex-col items-center">
                         <p className="text-sm text-muted-foreground mb-4">Dernière mise à jour : Février 2026</p>

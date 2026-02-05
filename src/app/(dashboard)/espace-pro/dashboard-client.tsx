@@ -167,12 +167,12 @@ export default function DashboardClient({
                             <p className="text-xs text-muted-foreground mb-2">Partagez ce lien avec vos clients :</p>
 
                             <div className="bg-gray-100 p-3 rounded-lg text-xs font-mono break-all border border-gray-200 mb-3 select-all">
-                                {`https://maisonnubi.ci/prestataire/${profile.slug}`}
+                                {`https://maisonnubi.com/prestataire/${profile.slug}`}
                             </div>
 
                             <div className="flex gap-2">
                                 <Button variant="outline" size="sm" className="flex-1" onClick={() => {
-                                    navigator.clipboard.writeText(`https://maisonnubi.ci/prestataire/${profile.slug}`);
+                                    navigator.clipboard.writeText(`https://maisonnubi.com/prestataire/${profile.slug}`);
                                     alert("Lien copié !");
                                 }}>
                                     <Copy className="h-3 w-3 mr-2" />

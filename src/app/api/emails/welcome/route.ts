@@ -71,7 +71,7 @@ export async function POST(request: Request) {
                                 </p>
                             </div>
                             
-                            <a href="https://maisonnubi.ci/espace-pro/profil" style="display: inline-block; background-color: #D4AF37; color: #ffffff; text-decoration: none; padding: 16px 32px; border-radius: 50px; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-top: 16px;">
+                            <a href="https://maisonnubi.com/espace-pro/profil" style="display: inline-block; background-color: #D4AF37; color: #ffffff; text-decoration: none; padding: 16px 32px; border-radius: 50px; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-top: 16px;">
                                 Compléter mon profil
                             </a>
                         </td>
@@ -84,7 +84,7 @@ export async function POST(request: Request) {
                                 © 2026 Maison Nubi - L'annuaire beauté premium d'Abidjan
                             </p>
                             <p style="margin: 8px 0 0; font-size: 12px; color: #9ca3af;">
-                                <a href="https://maisonnubi.ci" style="color: #D4AF37; text-decoration: none;">maisonnubi.ci</a>
+                                <a href="https://maisonnubi.com" style="color: #D4AF37; text-decoration: none;">maisonnubi.com</a>
                             </p>
                         </td>
                     </tr>

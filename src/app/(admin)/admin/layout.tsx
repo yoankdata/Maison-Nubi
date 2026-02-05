@@ -7,7 +7,7 @@ import { signOutAction } from "@/app/actions/auth";
 
 /**
  * Liste des emails admin lue depuis la variable d'environnement
- * Format dans .env.local : ADMIN_EMAILS=admin@maisonnubi.ci,autre@email.com
+ * Format dans .env.local : ADMIN_EMAILS=email1@example.com,email2@example.com
  * 
  * Avantages :
  * - Pas de redéploiement nécessaire pour changer les admins (sur Vercel)

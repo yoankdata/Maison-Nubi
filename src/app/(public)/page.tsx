@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "Trouvez les meilleurs professionnels de la beauté à Abidjan : coiffure, maquillage, ongles, soins et barber. Réservez en un clic via WhatsApp. 100% gratuit.",
   keywords: ["beauté Abidjan", "coiffeuse Abidjan", "maquillage Côte d'Ivoire", "salon de beauté", "tresses", "braids", "nail art"],
   alternates: {
-    canonical: "https://maisonnubi.ci",
+    canonical: "https://maisonnubi.com",
   },
 };
 
@@ -22,13 +22,13 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Maison Nubi",
-  url: "https://maisonnubi.ci",
+  url: "https://maisonnubi.com",
   description: "L'annuaire beauté premium en Côte d'Ivoire",
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://maisonnubi.ci/recherche?q={search_term_string}",
+      urlTemplate: "https://maisonnubi.com/recherche?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },
